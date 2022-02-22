@@ -4,6 +4,8 @@
     <MyMain />
     <MyFooter />
 
+    <MiaProva pippo="Tutto bene, tu?!" messaggio="Ciao come stai?"/>
+
   </div>
 </template>
 
@@ -12,12 +14,16 @@ import MyHeader from './components/MyHeader.vue';
 import MyMain from './components/MyMain.vue';
 import MyFooter from './components/MyFooter.vue';
 
+//Caso più semplice possibile solo per fini didattici
+import MiaProva from './components/partials/MiaProva.vue';
+
 export default {
   name: 'App',
   components: {
     MyHeader,
     MyMain,
-    MyFooter
+    MyFooter,
+    MiaProva
   }
 }
 </script>

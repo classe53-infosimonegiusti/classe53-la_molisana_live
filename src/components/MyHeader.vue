@@ -1,25 +1,13 @@
 <template>
   <header>
-      <a href="#">
-        <img src="../assets/img/la-molisana-logo.png">
-      </a>
+      
+      <MyLogo />
 
       <nav>
         <ul>
           <li v-for="(link, index) in links" :key="index">
-            <a :href="link.url">{{link.text}}</a>
+            <a :href="link.url" :class="link.current?'active':''">{{link.text}}</a>
           </li>
-          <!--
-          <li>
-            <a class="active" href="#">Prodotti</a>
-          </li>
-           <li>
-            <a href="#">Chi Siamo</a>
-          </li>
-           <li>
-            <a href="#">Contatti</a>
-          </li>
-          -->
         </ul>
       </nav>
 
@@ -27,8 +15,13 @@
 </template>
 
 <script>
+import MyLogo from './partials/MyLogo.vue';
+
 export default {
   name: 'MyHeader',
+  components: {
+    MyLogo
+  },
   data() {
     return {
       links: [
